@@ -9,6 +9,7 @@ $ git clone https://github.com/yyuu/pyenv.git ~/.pyenv
 그 다음에는 다음과 같은 명령어를 실행시켜줍니다.
 
 $ echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bash_profile
+
 $ echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bash_profile
 
 사용자의 홈 디렉터리에 있는 .bash_profile이라는 파일에 pyenv의 path를 설정해주는 스크립트를 넣어주는 명령어입니다.
