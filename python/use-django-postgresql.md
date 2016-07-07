@@ -1,3 +1,7 @@
+## Django에서 PostgreSQL 사용하기
+
+#### 1. PostgreSQL 설정
+
 Django와 PostgreSQL을 연동하기 위해서는 psycopg2 라는 패키지가 필요합니다.
 
 그럼 설치하기 전에
@@ -43,6 +47,7 @@ ALTER ROLE
 이제 데이터베이스쪽 설정은 끝났습니다.
 
 
+#### 2. Django 설정
 
 Django 프로젝트를 열고 프로젝트_이름/settings.py 로 가줍니다.
 ```
