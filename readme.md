@@ -14,4 +14,4 @@
 
 
 ### Ubuntu
-- [Ubuntu에서 PostgreSQL 사용하기](ubuntu/user-postgresql.md)
+- [Ubuntu에서 PostgreSQL 사용하기](ubuntu/use-postgresql.md)
