@@ -1,6 +1,7 @@
 ## Python 문법
 > Python 3.x 버전 기준
 
+
 #### 1. Number
 
 ```python
@@ -49,7 +50,7 @@ last = 'Kang'
 print(first + last) # Myungseo Kang
 print(last * 5)     # KangKangKangKangKang
 ```
-+ 기호를 이용해서 문자열을 합치는 것이 가능합니다.
+\+ 기호를 이용해서 문자열을 합치는 것이 가능합니다.
 또한 * 기호를 이용해서 문자열을 반복하는 것이 가능합니다.
 
 
@@ -109,6 +110,7 @@ elif를 쓴다는 것입니다.
 
 
 #### 5. List
+
 List는 배열이라고 생각하면 편합니다.
 
 ```python
@@ -328,24 +330,16 @@ print(test) # {1: 'first', 3: 'third'}
 test = {'name': 'Myungseo', 'nickname': 'L3opold7', 'birthday': '0523'}
 print(test.keys())   # dict_keys(['name', 'nickname', 'birthday'])
 print(test.values()) # dict_values(['Myungseo', 'L3opold7', '0523'])
-
-for key in test.keys():
-    print(test[key])
-'''
-Myungseo
-L3opold7
-0523
-'''
+print(test.items()) # dict_items([('nickname', 'L3opold7'), ('name', 'Myungseo'), ('birthday', '0523')])
 ```
 keys(), values() 함수를 통해서 딕셔너리의 key 혹은 value를 dict_keys 혹은 dict_values 객체로 얻을 수 있습니다.
+items() 함수는 key와 value를 Tuple을 사용해서 묶은 값을 dict_items 라는 객체로 반환해줍니다.
 
 ```python
 test = {'name': 'Myungseo', 'nickname': 'L3opold7', 'birthday': '0523'}
-print(test.items()) # dict_items([('nickname', 'L3opold7'), ('name', 'Myungseo'), ('birthday', '0523')])
 test.clear()
 print(test) # {}
 ```
-items() 함수는 key와 value를 Tuple을 사용해서 묶은 값을 dict_items 라는 객체로 반환해줍니다.
 clear() 함수를 이용해서 모두 지워버릴 수 있다!
 
 ```python
