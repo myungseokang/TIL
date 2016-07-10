@@ -325,11 +325,47 @@ print(test) # {1: 'first', 3: 'third'}
 삭제는 List에서 사용했듯이 del() 함수를 사용하면 됩니다.
 
 ```python
-test = {'name': 'Myungseo', 'nickname': 'L3opold7', 'birthday': '0523', '': ''}
+test = {'name': 'Myungseo', 'nickname': 'L3opold7', 'birthday': '0523'}
+print(test.keys())   # dict_keys(['name', 'nickname', 'birthday'])
+print(test.values()) # dict_values(['Myungseo', 'L3opold7', '0523'])
 
 for key in test.keys():
     print(test[key])
+'''
+Myungseo
+L3opold7
+0523
+'''
 ```
+keys(), values() 함수를 통해서 딕셔너리의 key 혹은 value를 dict_keys 혹은 dict_values 객체로 얻을 수 있습니다.
+
+```python
+test = {'name': 'Myungseo', 'nickname': 'L3opold7', 'birthday': '0523'}
+print(test.items()) # dict_items([('nickname', 'L3opold7'), ('name', 'Myungseo'), ('birthday', '0523')])
+test.clear()
+print(test) # {}
+```
+items() 함수는 key와 value를 Tuple을 사용해서 묶은 값을 dict_items 라는 객체로 반환해줍니다.
+clear() 함수를 이용해서 모두 지워버릴 수 있다!
+
+```python
+test = {'name': 'Myungseo', 'nickname': 'L3opold7', 'birthday': '0523'}
+
+print(test.get('no_key')) # None
+print(test.get('name'))  # Myungseo
+print(test['name'])      # Myungseo
+print(test['no_key'])    # Error
+```
+test['no_key'] 의 경우에는 Error를 내뱉지만 test.get('no_key')는 None 객체를 반환하기 때문에 get(x, y) 함수를 쓰는 것이 더 적절해보입니다.
+get(x, y) 함수는 Dictionary 안에 x 라는 키 값이 없을 경우 y 라는 디폴트 값을 반환해줍니다.
+
+```python
+test = {'name': 'Myungseo', 'nickname': 'L3opold7', 'birthday': '0523'}
+
+print('name' in test)   # True
+print('no_key' in test) # False
+```
+
 
 #### 8. for, for in, while
 
