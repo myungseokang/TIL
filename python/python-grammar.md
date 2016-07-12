@@ -435,9 +435,48 @@ print(set1)  # {1, 2, 4, 5}
 x의 위치에는 제거하고 싶은 값을 적어줍니다.
 
 
-#### 9. for, for in, while
+#### 9. for, while
 
+for, while 문은 반복문입니다.
+말그대로 반복시키기 위한 구문입니다.
+for문의 기본 구조는 아래와 같습니다.
 
+```python
+test = [1, 2, 3, 4, 5]
+
+for i in test:
+    print(i)
+    '''
+    1
+    2
+    3
+    4
+    5
+    '''
+```
+
+다음과 같이 i 부분에는 변수, test 부분에는 List나 Tuple 혹은 String 같은 반복가능한 변수가 옵니다.
+그 다음에는 하고싶은 코드를 적으면 됩니다.
+그리고 아래와 같이도 사용할 수 있습니다.
+
+```python
+test = [(1, 2), (3, 4)]
+
+for (i, j) in test:
+    print(i+j)
+    '''
+    3
+    7
+    '''
+```
+이렇게도 사용이 가능합니다.
+C언어의 for문보다는 간편하게 사용할 수 있는 것 같습니다.
+
+```python
+for i in range(0, 10):
+    print(i)
+```
+range 객체를 이용해서 쉽게 for문을 만들수도 있습니다.
 
 #### 10. Function
 
