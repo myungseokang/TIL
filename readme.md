@@ -5,7 +5,7 @@
 
 * [Python](#python)
 * [Ubuntu](#ubuntu)
-# [AWS](#aws)
+* [AWS](#aws)
 
 ---
 
