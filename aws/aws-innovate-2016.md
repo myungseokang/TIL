@@ -1,4 +1,4 @@
-#### AWS INNOVATE 2016
+## AWS INNOVATE 2016
 
 DynamoDB
 
@@ -108,5 +108,5 @@ AWS ECS/ECR을 활용한 컨테이너 운영
 	}
 
 	http://slideshare.net/awskorea
-	http://youtube.com/awskorea 
+	http://youtube.com/awskorea
 }
