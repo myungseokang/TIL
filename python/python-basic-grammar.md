@@ -535,12 +535,35 @@ for i in range(0, 10):
 ```
 range 객체를 이용해서 쉽게 for문을 만들수도 있습니다.
 
+간단하게 List 내장 함수와 for문을 이용한 예제를 보겠습니다.
+```python
+test_list = [1, 2, 3, 4, 5]
+result = []
+
+for num in test_list:
+    result.append(num*3)
+    
+print(result)  # [3, 6, 9, 12, 15]
+```
+이런 코드를 아래와 같이 요약할 수 있습니다
+```python
+test_list = [1, 2, 3, 4, 5]
+
+result = [num * 3 for in test_list]
+
+print(result)  # [3, 6, 9, 12, 15]
+```
+이렇게 for문을 알아보았습니다.
+
+
 #### 10. Function
 
 
 
-#### 11. Lambda
+#### 11. File I/O
 
 
 
-#### 12. File I/O
+#### 12. Lambda
+
+
