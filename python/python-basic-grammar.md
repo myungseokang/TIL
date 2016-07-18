@@ -1,7 +1,7 @@
 ## Python 문법
 > Python 3.x 버전 기준
 
-#### 0. Python
+#### 0. Python(파이썬)
 
 일단 Python 문법을 배우기 전에 Python이라는 언어에 대해 알아두면 좋을 것 같아서 내용을 추가합니다.
 Python이란 1991년 귀도 반 로섬(Guido van Rossum)이 개발한 고급 프로그래밍 언어입니다.
@@ -59,7 +59,7 @@ Python의 탄생 이유 자체가 교육을 목적으로 설계되어서 Python 
 정말정말 속도가 중요한 모듈같은 경우는 C언어 같은 컴파일 언어를 이용해서 별도의 모듈로 만들어 붙일 수도 있습니다.
 
 
-#### 1. Number
+#### 1. Number(숫자 자료형)
 
 ```python
 # 기본적인 사칙연산
@@ -74,7 +74,7 @@ print(8 % 3)   # 2 나머지
 들이 가능합니다.
 
 
-#### 2. String
+#### 2. String(문자열 자료형)
 
 ```python
 test = "Hello World!"
@@ -111,7 +111,7 @@ print(last * 5)      # KangKangKangKangKang
 또한 * 기호를 이용해서 문자열을 반복하는 것이 가능합니다.
 
 
-#### 3. Slicing String
+#### 3. Slicing String(문자열 슬라이싱)
 
 ```python
 test_str = 'Leopold'
@@ -139,7 +139,7 @@ print(test_str[3:])   # pold
 끝지점을 지정하지 않으면 콜론 앞 부분 숫자부터 끝까지 출력합니다.
 
 
-#### 4. if, elif, else
+#### 4. if, elif, else(조건문)
 
 ```python
 name = 'Leopold'
@@ -166,7 +166,7 @@ else:
 elif를 쓴다는 것입니다.
 
 
-#### 5. List
+#### 5. List(리스트 자료형)
 
 List는 배열이라고 생각하면 편합니다.
 
@@ -302,7 +302,7 @@ List에서는 위와 같은 내장 함수들을 사용할 수 있습니다.
 여기에 더해서 len() 함수로 List 값들의 개수를 얻을 수 있습니다.
 
 
-#### 6. Tuple
+#### 6. Tuple(튜플 자료형)
 
 Tuple은 조금 특이한 List라고 해도 무방할 정도로 List와 성격이 비슷합니다.
 
@@ -340,7 +340,7 @@ print(tp2 * 2)    # (4, 5, 6, 4, 5, 6)
 ```
 
 
-#### 7. Dictionary
+#### 7. Dictionary(딕셔너리 자료형)
 
 Dictionary는 키=값 형태로 이루어진 자료형입니다.
 이렇게 대응 관계를 나타내는 자료형을 연관 배열 혹은 Hash라고 합니다.
@@ -418,7 +418,7 @@ print('no_key' in test)  # False
 ```
 
 
-#### 8. Set
+#### 8. Set(집합 자료형)
 
 집합 자료형인 Set 입니다.
 말 그대로 집합을 나타내기 위한 자료형입니다.
@@ -492,7 +492,7 @@ print(set1)  # {1, 2, 4, 5}
 x의 위치에는 제거하고 싶은 값을 적어줍니다.
 
 
-#### 9. for, while
+#### 9. for, while(반복문)
 
 for, while 문은 반복문입니다.
 말그대로 반복시키기 위한 구문입니다.
@@ -556,14 +556,15 @@ print(result)  # [3, 6, 9, 12, 15]
 이렇게 for문을 알아보았습니다.
 
 
-#### 10. Function
+#### 10. Function(함수)
 
 
 
-#### 11. File I/O
+#### 11. File I/O(파일 입출력)
 
 
 
-#### 12. Lambda
+#### 12. Lambda(익명 함수)
 
 
+#### 13. Regex(정규 표현식)
