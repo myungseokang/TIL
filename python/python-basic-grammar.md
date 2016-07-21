@@ -19,7 +19,7 @@ Python의 특징은 다음과 같습니다.
 
 
 **인터프리터 기반의 객체지향 언어**
-Python은 바이트 코드(Byte code)의 컴파일을 지원하는 동적 인터프리팅 언어입니다... 
+Python은 바이트 코드(Byte code)의 컴파일을 지원하는 동적 인터프리팅 언어입니다...
 라는 소리는 Python 인터프리터가 사용자도 모르는 사이에 바이트 코드(Byte code)를 생성해서 해당 코드를 실행할 때 더욱 빠르게 실행할 수 있다는 것입니다.
 이러한 인터프리터 덕분에 Python 셸(Shell)에서 interpreter mode 로 코드를 한줄한줄 확인해가면서 작성할 수 있습니다.
 이렇게 만들어진 바이트 코드(Byte code)는 플랫폼에 구애받지 않기 때문에 다른 플랫폼에서 다시 컴파일할 필요가 없습니다.
@@ -542,7 +542,7 @@ result = []
 
 for num in test_list:
     result.append(num*3)
-    
+
 print(result)  # [3, 6, 9, 12, 15]
 ```
 이런 코드를 아래와 같이 요약할 수 있습니다
@@ -558,13 +558,53 @@ print(result)  # [3, 6, 9, 12, 15]
 
 #### 10. Function(함수)
 
+함수(Function)는 여러 프로그래밍 언어에서 등장하는 개념입니다.
+함수를 사용함으로써 얻는 이점은 많습니다.
+일단 코드의 가독성이 높아지고, 코드를 재사용 할수도 있습니다.
+
+Python에서는 다음과 같이 함수를 정의합니다.
+```Python
+def fuction_name(parameter):
+    code here
+```
+호출할 때도 간단합니다.
+```Python
+function_name(parameter)
+```
+처럼 호출해주게 되면 함수의 코드가 실행됩니다.
+
+예를 들어보겠습니다.
+```Python
+def hello(num):
+    for i in range(0,num):
+        print('hello,'+str(i))
+```
+이렇게 함수를 설정해주게 되면
+hello 함수를 인자값으로 5를 넘겨서 실행해주게 되면
+```
+hello,0
+hello,1
+hello,2
+hello,3
+hello,4
+```
+이렇게 나오게 됩니다.
+range 객체로 0, num 까지의 iterable 객체를 만들어줬고, print 함수로 i를 str 함수를 이용해 문자열로 바꾼 뒤, 출력해주고 있습니다.
 
 
 #### 11. File I/O(파일 입출력)
-
 
 
 #### 12. Lambda(익명 함수)
 
 
 #### 13. Regex(정규 표현식)
+
+
+#### 14. Class(클래스) + Object(객체)
+
+
+#### 15. try ~ expect(예외 처리)
+
+
+#### 16. Init(초기화)
