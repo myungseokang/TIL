@@ -15,6 +15,7 @@ pip install django-rest-swagger
 
 #### 2. Django settings.py 수정
 
+INSTALLED_APPS에 rest_framework, rest_framework_swagger를 추가해줍니다.
 
 #### 3. Django REST Swagger View 추가
 
@@ -24,4 +25,11 @@ pip install django-rest-swagger
 2. SwaggerURIRenderer, OpenAPIRenderer 2개의 렌더러(Renderer)를 데코레이터(Decorator 혹은 장식자)로 꾸며줍니다.
 3. 해당 View 를 urls.py에 등록 후, 등록한 URL로 접근합니다.
 
-#### 4. 실행 후 확인
+#### 4. urls.py에 추가
+
+urls.py에 view 이름을 추가해줍니다.
+
+#### 5. 실행 후 확인
+
+python manage.py runserver 를 해주고 확인해줍니다.
+[http://127.0.0.1:8000/](http://127.0.0.1:8000)
