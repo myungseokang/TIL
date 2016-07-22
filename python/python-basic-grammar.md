@@ -591,6 +591,25 @@ hello,4
 이렇게 나오게 됩니다.
 range 객체로 0, num 까지의 iterable 객체를 만들어줬고, print 함수로 i를 str 함수를 이용해 문자열로 바꾼 뒤, 출력해주고 있습니다.
 
+이번에는 다른 예제를 다뤄보겠습니다.
+
+int형 값을 넘겨받아서 그 수가 소수인지 아닌지를 알려주는 함수를 만들어보겠습니다.
+
+```python
+def prime_number_check(num):
+    i = 0
+    while(i < num):
+        if(num % i):
+            continue
+        else:
+            print("이 수는 소수가 아닙니다.")
+            break;
+        i += 1
+
+prime_number_check(10)
+prime_number_check(2)
+```
+
 
 #### 11. File I/O(파일 입출력)
 
