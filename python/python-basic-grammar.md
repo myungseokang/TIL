@@ -597,15 +597,42 @@ int형 값을 넘겨받아서 그 수에 1100을 곱해서 print 해주는 함�
 
 ```python
 def multiply_number(num):
-    print(num * 1100)
+    print(num * 1500)
 
-prime_number_check(5)  # 5500
+prime_number_check(5)  # 7500
 ```
 이런 식으로 multiply_number 함수안에 print 함수를 써서 multiply_number만 호출해도 print 함수까지 같이 호출할 수 있습니다.
 
 다음에는 Lambda라는 익명 함수에 대해 알아보겠습니다.
 
+
 #### 11. Lambda(익명 함수)
+
+Lambda(람다) 라는 익명 함수는 다른 프로그래밍 언어에도 있는 개념입니다.
+일종의 작은 함수입니다.
+지금까지 알아본 Function(함수)는 어떤 코드를 실행하는 함수를 정의하고, 인자를 전달하면서 함수를 호출합니다.
+하지만 Lambda(익명 함수)는 일반 함수와 달리 함수명이 없습니다.
+그리고 여러번 호출하지도 않고 1회성으로 사용하는 함수입니다.
+
+```python
+multiply_number = lambda x: x*1500
+print(multiply_number(5))  # 7500
+```
+
+이런 식으로 익명 함수를 정의해서 사용할 수 있습니다.
+
+조금만 더 복잡하게 들어가보겠습니다.
+
+```python
+func_range = list(map(lambda x: x*1000, (range(1, 6))))
+print(func_range)  # [1000, 2000, 3000, 4000, 5000]
+```
+이 코드는 lambda 키워드로 Lambda(익명 함수)를 만들고, range 함수로 1~5 객체를 만들었습니다.
+두개의 값을 map()이라는 함수를 사용해서 Mapping(매핑)을 해주고 있습니다. 즉, x의 값이 1,2,3,4,5가 됩니다. 
+그 다음 list() 함수로 List 객체를 만듭니다.
+
+아무래도 Lambda(익명 함수)는 일반 함수보다 실제 사용이 적겠지만 
+그래도 Lambda(익명 함수)라는 것을 알아두면 일반 함수로 만들 것을 Lambda(익명 함수)로 간결하게 코딩할 수 있습니다.
 
 
 #### 12. File I/O(파일 입출력)
