@@ -593,28 +593,22 @@ range 객체로 0, num 까지의 iterable 객체를 만들어줬고, print 함�
 
 이번에는 다른 예제를 다뤄보겠습니다.
 
-int형 값을 넘겨받아서 그 수가 소수인지 아닌지를 알려주는 함수를 만들어보겠습니다.
+int형 값을 넘겨받아서 그 수에 1100을 곱해서 print 해주는 함수입니다.
 
 ```python
-def prime_number_check(num):
-    i = 0
-    while(i < num):
-        if(num % i):
-            continue
-        else:
-            print("이 수는 소수가 아닙니다.")
-            break;
-        i += 1
+def multiply_number(num):
+    print(num * 1100)
 
-prime_number_check(10)
-prime_number_check(2)
+prime_number_check(5)  # 5500
 ```
+이런 식으로 multiply_number 함수안에 print 함수를 써서 multiply_number만 호출해도 print 함수까지 같이 호출할 수 있습니다.
+
+다음에는 Lambda라는 익명 함수에 대해 알아보겠습니다.
+
+#### 11. Lambda(익명 함수)
 
 
-#### 11. File I/O(파일 입출력)
-
-
-#### 12. Lambda(익명 함수)
+#### 12. File I/O(파일 입출력)
 
 
 #### 13. Regex(정규 표현식)
