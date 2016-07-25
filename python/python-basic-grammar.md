@@ -628,10 +628,10 @@ func_range = list(map(lambda x: x*1000, (range(1, 6))))
 print(func_range)  # [1000, 2000, 3000, 4000, 5000]
 ```
 이 코드는 lambda 키워드로 Lambda(익명 함수)를 만들고, range 함수로 1~5 객체를 만들었습니다.
-두개의 값을 map()이라는 함수를 사용해서 Mapping(매핑)을 해주고 있습니다. 즉, x의 값이 1,2,3,4,5가 됩니다. 
+두개의 값을 map()이라는 함수를 사용해서 Mapping(매핑)을 해주고 있습니다. 즉, x의 값이 1,2,3,4,5가 됩니다.
 그 다음 list() 함수로 List 객체를 만듭니다.
 
-아무래도 Lambda(익명 함수)는 일반 함수보다 실제 사용이 적겠지만 
+아무래도 Lambda(익명 함수)는 일반 함수보다 실제 사용이 적겠지만
 그래도 Lambda(익명 함수)라는 것을 알아두면 일반 함수로 만들 것을 Lambda(익명 함수)로 간결하게 코딩할 수 있습니다.
 
 
@@ -644,7 +644,93 @@ print(func_range)  # [1000, 2000, 3000, 4000, 5000]
 #### 14. Class(클래스) + Object(객체)
 
 
-#### 15. try ~ expect(예외 처리)
+#### 15. try ~ expect, finally(예외 처리)
+
+Python에서 예외 처리를 하는 방법을 알아보겠습니다.
+
+먼저 예외가 발생할 수 있는 부분을 try 문으로 묶은 다음에 except문으로 예외를 지정해서 처리해줄 수 있습니다.
+다음 코드를 보겠습니다.
+
+```Python
+try:
+    num = 10 / 0
+    print(num)
+except Exception:
+    print("0으로 나눌 수 없습니다.")
+```
+
+이 코드를 실행하게 되면 except 문만 실행되는 것을 알 수 있습니다.
+10을 0으로 나눌 때 오류가 발생해서 except 문으로 넘어갔기 때문에 print(num) 부분은 실행되지 않습니다.
+
+만약에 위의 코드에서 0이 아닌 5로 나누었다면 어떤 결과가 나올까요?
+
+```python
+try:
+    num = 10 / 5
+    print(num)
+except Exception:
+    print("0으로 나눌 수 없습니다.")
+```
+
+이 코드를 실행하게 되면 2.0 이 나올 것입니다.
+except 문이 아닌 try 부분만 실행됨을 알 수 있습니다.
+
+그리고 except 문에 Exception이 아닌 좀 더 명확한 예외를 표기할 수도 있습니다.
+예를 들면 이런 식이죠.
+
+```python
+try:
+    num = 10 / 0
+    print(num)
+except ZeroDivisionError as e:
+    print("0으로 나눌 수 없습니다.")
+```
+
+바뀐 부분이 두 가지 있습니다.
+except 문에 Exception이 아닌 ZeroDivisionError 로 명시한 것과 as e 라는 것을 추가한 것입니다.
+또한 except (ZeroDivisionError, IndexError) as e: 처럼 () 로 묶어서 함께 처리하는 것도 가능합니다.
+
+as e 부분은 말 그대로 alias e 라는 뜻으로 except 문 안에서 ZeroDivisionError 라는 이름을 e 라는 이름으로 쓰겠다는 말입니다.
+그리고 ZeroDivisionError 는 Exception 중에 하나로 0으로 나눌 경우 발생하는 에러입니다.
+
+ZeroDivisionError 는 Exception 클래스를 상속받기 때문에 Exception으로 호출해도 불리게 됩니다.
+
+그 다음에는 finally 키워드에 대해 알아보겠습니다.
+
+finally 키워드는 예외가 발생하든 안하든 무조건 실행시킬 코드입니다.
+
+```python
+try:
+    num = 10 / 5
+    print(num)
+except ZeroDivisionError as e:
+    print('0으로 나눌 수 없습니다.')
+finally:
+    print('실행 완료')
+```
+
+라고 코드를 적게 될 경우
+2.0이 출력된 후, 실행 완료가 출력됩니다.
+
+```python
+try:
+    num = 10 / 0
+    print(num)
+except ZeroDivisionError as e:
+    print('0으로 나눌 수 없습니다.')
+finally:
+    print('실행 완료')
+```
+
+이 경우에도 except 문이 실행된 후에 실행 완료 가 출력됩니다.
+
+Exception에 종류에는 다양한 것들이 있으므로 때에 맞춰서 다양한 Exception 클래스를 사용할 수 있습니다.
+그리고 Exception 클래스를 상속받아서 자신만의 클래스를 정의해서 사용할 수도 있습니다.
+
+그리고 try 문에서 raise 키워드를 사용해서 사용자가 직접 오류를 발생시키는 것 또한 가능합니다.
+
+```python
+```
 
 
 #### 16. Init(초기화)
