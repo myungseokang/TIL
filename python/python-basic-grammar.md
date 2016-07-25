@@ -730,7 +730,27 @@ Exception에 종류에는 다양한 것들이 있으므로 때에 맞춰서 다�
 그리고 try 문에서 raise 키워드를 사용해서 사용자가 직접 오류를 발생시키는 것 또한 가능합니다.
 
 ```python
+class CustomError(Exception):
+    def __str__(self):
+        return "올바르지 않은 이름입니다."
+
+
+def say_hello(name):
+    if name == 'Leopold':
+        print('Hello!')
+    else:
+        raise CustomError()
+
+try:
+    say_hello('Leopold')
+    say_hello('myungseo')
+except CustomError as e:
+    print(e)
 ```
+
+이런 식으로 raise, CustomError 를 모두 사용해보았습니다. 그리고 __str__ 함수 같은 경우에는 더블언더바 함수라고 하는 특정한 용도로 미리 정의해둔 함수입니다.
+
+이렇게 예외 처리를 알아보았습니다.
 
 
 #### 16. Init(초기화)
