@@ -1,11 +1,14 @@
 ## Django에서 S3에 Static, Media 파일 Serve하고 사용하기
+
 **참고한 웹사이트**
+
 [http://sebatyler.github.io/2016/07/16/django-storages-seoul.html](http://sebatyler.github.io/2016/07/16/django-storages-seoul.html)
 [http://intersnipe.blogspot.kr/2015/02/django-static-file-local.html](http://intersnipe.blogspot.kr/2015/02/django-static-file-local.html)
 [http://intersnipe.blogspot.kr/2015/02/django-media-file-local-s3.html](http://intersnipe.blogspot.kr/2015/02/django-media-file-local-s3.html)
 
 
 #### 1. S3 설정하기
+
  - 버킷을 만드세요
  - 새로운 유저를 만드세요. AWS IAM으로 가서 'create new users'를 클릭하세요. 5개의 칸이 한꺼번에 뜬는데 한개만 만드셔도 무방합니다. 그리고 하단의  'Generate an access key for each User' 체크 박스를 선택하세요.
  - Credentials를 복사 해놓으셔도 좋고, 다운로드 받으셔도 좋습니다.
@@ -16,7 +19,7 @@
  - 아래의 소스를 입력하시고, "BUCKET-NAME", "USER-ARN"만 자신의 상황에 맞게 변경해주시면 됩니다.
  - 첫번째 설정은 컨텐츠를  publicly readable하게 설정. 두번째 설정은 특정 유저가 S3에 작업 할 수 있는 모든 권한을 주는 것입니다.
 
-```
+```json
 {
     "Statement": [
         {
@@ -48,7 +51,7 @@
 
  - 만약 특정 누군가에게 추가 권한을 주고 싶다면, 아래와 같이 설정해준다. 아래 설정은 특정인에게 버킷에 있는 아이템을 복제해 갈수 있는 권한을 준느 것이다.
 
-```
+```json
     {
         "Action": "s3:ListBucket",
         "Effect": "Allow",
@@ -72,7 +75,7 @@ settings.py
 if DEBUG:
     STATIC_URL = '/static/'
     STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-    STATICFILES_STORAGE = 'pipeline.storage.PipelineCachedStorage'
+    STATICFILES_STORAGE = 'pipeline.storage.PipelineCachedStorage' # Local, 즉 DEBUG=True 일 경우 pipeline 사용
 
     MEDIA_URL = '/media/'
     MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
@@ -97,4 +100,4 @@ else:
     MEDIA_URL = "https://%s/" % AWS_S3_CUSTOM_DOMAIN
     DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
 ```
-allowed_hosts 설정 => ['\*']
+allowed_hosts 설정을 해주셔야 합니다. => ['\*']
