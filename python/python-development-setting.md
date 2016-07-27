@@ -1,15 +1,21 @@
 ## Python 개발환경 세팅
 
 ### 0. Git과 필수 패키지 설치
-```
+```shell
 sudo apt-get update
 ```
-```
+```shell
 sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev \
 libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils
 ```
-```
+```shell
 sudo apt-get install git
+```
+```shell
+sudo apt-get install python-pip
+```
+```shell
+pip install virtualenv
 ```
 
 ### 1. pyenv 설치
