@@ -12,7 +12,7 @@ libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev x
 sudo apt-get install git
 ```
 ```shell
-sudo apt-get install python-pip
+sudo apt-get install python3-pip
 ```
 ```shell
 pip install virtualenv
