@@ -9,10 +9,15 @@
 
 
 OS     : Ubuntu 14.04
+
 Python : 3.4.3(default python version에 virtualenv 만 사용)
+
 Nginx  : 1.4.6
+
 uWSGI  : 2.0.13.1
+
 Django : 1.10.rc1
+
 
 ### 0. virtualenv, virtualenvwrapper 설치와 세팅
 ```shell
