@@ -7,6 +7,7 @@
 
 [nerogit.github.io](http://nerogit.github.io/2016/02/23/python3-django-nginx-uwsgi-deploy/)
 
+--------------------------------------------------------------
 
 OS     : Ubuntu 14.04
 
@@ -17,6 +18,8 @@ Nginx  : 1.4.6
 uWSGI  : 2.0.13.1
 
 Django : 1.10.rc1
+
+--------------------------------------------------------------
 
 
 ### 0. virtualenv, virtualenvwrapper 설치와 세팅
