@@ -1,1 +1,0 @@
-# Two scoops of django
