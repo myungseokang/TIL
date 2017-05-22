@@ -1,8 +1,7 @@
 Coding Style
 ===
 
-1. 읽기 쉬운 코드를 작성하는 것이 왜 중요한가
----
+## 1. 읽기 쉬운 코드를 작성하는 것이 왜 중요한가
 
 코드의 특성은 **한 번 작성되면 여러 번 읽힌다** 는 것이다.
 
@@ -31,8 +30,7 @@ Coding Style
 [PEP 20](https://www.python.org/dev/peps/pep-0020/) 에 있는 `Explicit is better than Implicit` 을 보는 것 같았다.
 
 
-2. PEP 8
----
+## 2. PEP 8
 
 [PEP 8](https://www.python.org/dev/peps/pep-0008/)은 파이썬 공식 스타일 가이드 이다.
 
@@ -69,8 +67,7 @@ Pycharm도 아마 기본 설정이 120 글자였던 걸로 기억한다.
 그래서 나는 이 부분에 대해서 120 글자로 사용하고 있다.
 
 
-3. import 에 대해
----
+## 3. import 에 대해
 
 PEP 8 에서 다음과 같은 import 순서를 지향하고 있다.
 
@@ -93,8 +90,7 @@ PEP 8 에서 다음과 같은 import 순서를 지향하고 있다.
 4. 프로젝트 앱
 
 
-4. 명시적 성격의 상대 임포트 이용하기
----
+## 4. 명시적 성격의 상대 임포트 이용하기
 
 ~~이 부분은 좀 말이 어렵다~~
 
@@ -134,8 +130,7 @@ from __future__ import absolute_import
 | from models import WaffleCone    |   암묵적 상대    | 종종 다른 모듈에서 임포트해서 현재 앱에서 이용할 때 쓰지만 좋은 방법은 아님 |
 
 
-5. import * 은 피하자
----
+## 5. import * 은 피하자
 
 ```python
 # Baaaaaaad Pattern! Don't do this.
@@ -149,13 +144,11 @@ from django.db.models import *
 
 **절대로 위와 같이 작성하지 말자**
 
-6. 장고 코딩 스타일
----
+## 6. 장고 코딩 스타일
 
 일반적으로 널리 통용되는 장고 코딩 스타일!
 
-6.1 장고 코딩 스타일
----
+### 6.1 장고 코딩 스타일
 
 PEP 8 을 확장한 장고만의 코딩 스타일을 가지고 있다.
 
@@ -179,8 +172,7 @@ urlpatterns = [
 
 URL 패턴 이름에서 밑줄을 쓴 것과 같은 이유로 **템플릿 블록** 을 만들 때에도 밑줄을 쓴다.
 
-7. JS, HTML, CSS 스타일 가이드
----
+## 7. JS, HTML, CSS 스타일 가이드
 
 ### JS 스타일 가이드
 
@@ -190,13 +182,11 @@ airbnb style guide: https://github.com/airbnb/javascript
 
 CSScomb: CSS용 코딩 스타일 포맷 도구
 
-8. IDE나 텍스트 편집기에 종송되는 스타일의 코딩은 지양한다
----
+## 8. IDE나 텍스트 편집기에 종송되는 스타일의 코딩은 지양한다
 
 딱히 다른 내용은 없다. 제목이 곧 내용.
 
-9. 요약
----
+## 9. 요약
 
 일관된 코딩스타일을 정하고 따르는 것이 중요하다.
 
